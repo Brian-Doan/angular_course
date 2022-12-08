@@ -1,0 +1,10 @@
+<div class="cascade-wrapper">
+  <h1 class="heading">Component CascadeSelect</h1>
+
+  <select name="places" id="places" (change)="handleChangePlaces($event)">
+    <option *ngFor="let place of places">{{ place.name }}</option>
+  </select>
+  <select name="subPlaces" id="subPlaces">
+    <option *ngFor="let subPlace of subPlaces">{{ subPlace.name }}</option>
+  </select>
+</div>

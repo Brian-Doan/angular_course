@@ -1,1 +1,29 @@
-<h1 class="heading">Component Home</h1>
+<div class="home-wrapper">
+  <h1 class="heading">Component Home</h1>
+  <p>Hello {{ name }}</p>
+  <hr />
+  <p style="font-weight: 600; font-size: 20px; color: blue">*ngIf</p>
+  <h2 *ngIf="age < 18">You are under 18</h2>
+  <h2 *ngIf="age >= 18">You are over 18</h2>
+  <hr />
+  <p style="font-weight: 600; font-size: 20px; color: blue">Data binding</p>
+  <input type="text" [(ngModel)]="name" />
+  <br />
+  <!-- <input [value]="name" />
+  <hr />
+  <input [value]="name" [title]="'My name is ' + name" />
+  <hr /> -->
+  <button (click)="handleResetName()">Reset name</button>
+  <hr />
+  <p style="font-weight: 600; font-size: 20px; color: blue">
+    if...then else with ng-template
+  </p>
+  <div *ngIf="age < 18; then underBlock; else overBlock"></div>
+  <ng-template #underBlock><h2>You are under 18</h2></ng-template>
+  <ng-template #overBlock><h2>You are over 18</h2></ng-template>
+  <hr />
+  <p style="font-weight: 600; font-size: 20px; color: blue">*ngFor</p>
+  <div *ngFor="let fruit of fruits; let i = index">
+    <li>{{ fruit }} with index {{ i }}</li>
+  </div>
+</div>

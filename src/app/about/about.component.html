@@ -1,0 +1,35 @@
+<div class="about-wrapper">
+  <h1 class="heading">Component About</h1>
+  <table>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>In stock</th>
+      <th>Discount</th>
+      <th>New Price</th>
+    </tr>
+    <tr *ngFor="let fruit of fruits2">
+      <td>{{ fruit.id }}</td>
+      <td>{{ fruit.name | uppercase }}</td>
+      <td>{{ fruit.price | currency : "USD" : "symbol" : "1.2" }}</td>
+      <td [ngClass]="{ empty: fruit.inStock === 0, 'text-right': true }">
+        {{ fruit.inStock }}
+      </td>
+
+      <td [ngClass]="{ discount: fruit.isDiscount }">
+        {{ fruit.isDiscount | onSale }}
+      </td>
+
+      <div *ngIf="fruit.isDiscount; then discount; else notDiscount"></div>
+      <ng-template #discount>
+        <td [ngClass]="{ discount: true }">
+          {{ fruit.price * 0.9 | currency : "USD" : "symbol" : "1.2" }}
+        </td>
+      </ng-template>
+      <ng-template #notDiscount>
+        <td>{{ fruit.price | currency : "USD" : "symbol" : "1.2" }}</td>
+      </ng-template>
+    </tr>
+  </table>
+</div>
