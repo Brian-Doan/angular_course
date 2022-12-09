@@ -10,9 +10,19 @@ import { OnSalePipe } from './on-sale.pipe';
 import { CascadeSelectComponent } from './cascade-select/cascade-select.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HighlightDirective } from './Directives/highlight.directive';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutComponent, OnSalePipe, CascadeSelectComponent, PageNotFoundComponent, HighlightDirective],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    AboutComponent,
+    OnSalePipe,
+    CascadeSelectComponent,
+    PageNotFoundComponent,
+    HighlightDirective,
+    TemplateDrivenFormComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,23 @@
+<h1 class="heading">Component TemplateDrivenComponent</h1>
+<form (ngSubmit)="handleSubmitForm()">
+  <label for="firstName">First name:</label>
+  <input
+    type="text"
+    [(ngModel)]="firstName"
+    name="firstName"
+    [ngModelOptions]="{ standalone: true }"
+  />
+  <br />
+  <br />
+  <label for="lastName">Last name:</label>
+  <input
+    type="text"
+    [(ngModel)]="lastName"
+    name="lastName"
+    [ngModelOptions]="{ standalone: true }"
+  />
+  <br />
+  <br />
+  <!-- <button (click)="handleSubmitForm()">Submit</button> -->
+  <button>Submit 2</button>
+</form>
