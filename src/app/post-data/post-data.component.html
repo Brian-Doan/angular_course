@@ -1,0 +1,24 @@
+<h1 class="heading">Component PostData</h1>
+<form (ngSubmit)="handleSubmitForm()" [formGroup]="postCourseForm">
+  <label for="name">Course name:</label>
+  <input type="text" name="name" formControlName="name" />
+  <div *ngIf="!postCourseForm.controls['name'].valid">
+    <p style="color: red">Course name is required</p>
+  </div>
+  <br />
+  <label for="description">Course description:</label>
+  <input type="text" name="description" formControlName="description" />
+  <br />
+  <button type="submit" [disabled]="!postCourseForm.valid">Submit</button>
+  <hr />
+  <ul>
+    <li *ngFor="let course of courses">
+      <p style="font-size: 18px; font-weight: 600; color: red">
+        {{ course.name }}
+      </p>
+      <p>
+        {{ course.description }}
+      </p>
+    </li>
+  </ul>
+</form>

@@ -19,4 +19,10 @@ export class HttpServerService {
     const url = `${this.REST_API_SERVER}/courses`;
     return this.httpClient.get<any>(url, this.httpOptions);
   }
+
+  public postCourse(payload: any): Observable<any> {
+    const url = `${this.REST_API_SERVER}/courses`;
+    console.log('[HttpServerService - postCourse] payload :', payload);
+    return this.httpClient.post<any>(url, payload, this.httpOptions);
+  }
 }
