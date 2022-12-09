@@ -38,7 +38,7 @@ export class AboutComponent implements OnInit {
     },
   ];
 
-  public loginName = 'user'
+  public loginName = 'admin'
 
   constructor() {}
 
