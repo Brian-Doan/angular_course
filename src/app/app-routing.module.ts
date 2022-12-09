@@ -7,6 +7,7 @@ import { CascadeSelectComponent } from './cascade-select/cascade-select.componen
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { GetDataComponent } from './get-data/get-data.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'cascade', component: CascadeSelectComponent },
   { path: 'template-form', component: TemplateDrivenFormComponent },
   { path: 'reactive-form', component: ReactiveFormComponent },
+  { path: 'get-data', component: GetDataComponent },
   { path: '**', component: PageNotFoundComponent }, // Wildcard route for a 404 page
 ];
 
