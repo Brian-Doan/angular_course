@@ -1,5 +1,6 @@
 <div class="about-wrapper">
   <h1 class="heading">Component About</h1>
+  <p style="color: blue; font-weight: 600; font-size: 20px">[ngClass] - Pipe</p>
   <table>
     <tr>
       <th>#</th>
@@ -32,4 +33,19 @@
       </ng-template>
     </tr>
   </table>
+  <hr />
+  <p style="font-weight: 600; font-size: 20px; color: blue">[ngSwitch]</p>
+  <ul [ngSwitch]="loginName">
+    <li *ngSwitchCase="'user'">
+      <p>User has logged in</p>
+      <app-cascade-select></app-cascade-select>
+    </li>
+    <li *ngSwitchCase="'admin'">
+      <p>Admin has logged in</p>
+      <app-home></app-home>
+    </li>
+    <li *ngSwitchDefault>
+      <p>Default case</p>
+    </li>
+  </ul>
 </div>

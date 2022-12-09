@@ -38,6 +38,8 @@ export class AboutComponent implements OnInit {
     },
   ];
 
+  public loginName = 'user'
+
   constructor() {}
 
   ngOnInit(): void {}
