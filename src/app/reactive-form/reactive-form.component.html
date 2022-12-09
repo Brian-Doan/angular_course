@@ -1,0 +1,19 @@
+<h1 class="heading">Component ReactiveForm</h1>
+<form (ngSubmit)="handleSubmitForm()" [formGroup]="formData2">
+  <label for="firstName">First name:</label>
+  <input type="text" name="firstName" formControlName="firstName" />
+  <div *ngIf="!formData2.controls['firstName'].valid">
+    <p style="color: red">First name is required</p>
+  </div>
+  <br />
+  <br />
+  <label for="lastName">Last name:</label>
+  <input type="text" name="lastName" formControlName="lastName" />
+  <br />
+  <br />
+  <label for="age">Age:</label>
+  <input type="text" name="age" formControlName="age" />
+  <br />
+  <br />
+  <button type="submit" [disabled]="!formData2.valid">Submit</button>
+</form>
