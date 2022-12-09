@@ -8,9 +8,10 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { OnSalePipe } from './on-sale.pipe';
 import { CascadeSelectComponent } from './cascade-select/cascade-select.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutComponent, OnSalePipe, CascadeSelectComponent],
+  declarations: [AppComponent, HomeComponent, AboutComponent, OnSalePipe, CascadeSelectComponent, PageNotFoundComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
