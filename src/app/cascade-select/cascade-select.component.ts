@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../Services/common.service';
 
 @Component({
   selector: 'app-cascade-select',
@@ -24,10 +25,17 @@ export class CascadeSelectComponent implements OnInit {
     },
   ];
   public subPlaces: any = [{ name: 'Chọn Quận/Huyện' }];
+  public counter = 0;
+  public squaredCounter = 0;
 
-  constructor() {}
+  constructor(private common: CommonService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.counter = this.common.getCounter();
+    let increaseCounter = this.counter + 1;
+    this.squaredCounter = this.common.binhPhuong(this.counter);
+    this.common.setCounter(increaseCounter);
+  }
 
   public handleChangePlaces(event: any) {
     const placeName = event.target.value;
