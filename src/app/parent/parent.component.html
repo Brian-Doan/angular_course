@@ -1,0 +1,6 @@
+<h1 class="heading">Component Parent</h1>
+<p>{{ message }}</p>
+<button (click)="handleSendData()">Send data to Child</button>
+<hr />
+<app-child #ChildBrian name="Brian" (sayHello)="sayHello($event)"></app-child>
+<app-child #ChildQuang name="Quang" (sayHello)="sayHello($event)"></app-child>

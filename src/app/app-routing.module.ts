@@ -9,6 +9,7 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { GetDataComponent } from './get-data/get-data.component';
 import { PostDataComponent } from './post-data/post-data.component';
+import { ParentComponent } from './parent/parent.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'reactive-form', component: ReactiveFormComponent },
   { path: 'get-data', component: GetDataComponent },
   { path: 'post-data', component: PostDataComponent },
+  { path: 'parent-component', component: ParentComponent },
   { path: '**', component: PageNotFoundComponent }, // Wildcard route for a 404 page
 ];
 
