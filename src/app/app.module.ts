@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { QRCodeModule } from 'angular2-qrcode';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { GetDataComponent } from './get-data/get-data.component';
 import { PostDataComponent } from './post-data/post-data.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { QRComponent } from './qr/qr.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { ChildComponent } from './child/child.component';
     PostDataComponent,
     ParentComponent,
     ChildComponent,
+    QRComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +43,7 @@ import { ChildComponent } from './child/child.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    QRCodeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

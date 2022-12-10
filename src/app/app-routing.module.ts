@@ -10,6 +10,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { GetDataComponent } from './get-data/get-data.component';
 import { PostDataComponent } from './post-data/post-data.component';
 import { ParentComponent } from './parent/parent.component';
+import { QRComponent } from './qr/qr.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'get-data', component: GetDataComponent },
   { path: 'post-data', component: PostDataComponent },
   { path: 'parent-component', component: ParentComponent },
+  { path: 'qr-code', component: QRComponent },
   { path: '**', component: PageNotFoundComponent }, // Wildcard route for a 404 page
 ];
 

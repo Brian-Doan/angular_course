@@ -1,0 +1,18 @@
+<h1 class="heading">Component QRCode</h1>
+<label for="qrValue">Link</label>
+<input type="text" (change)="handleChangeQRValue($event)" name="qrValue" />
+<br />
+<br />
+<label for="qrValue">Sub-fix</label>
+<input type="text" (change)="handleChangeSubfixValue($event)" name="subfix" />
+<br />
+<p>Full QR link</p>
+<input
+  type="text"
+  (change)="handleChangeFullQRLink($event)"
+  [value]="qrFull"
+  style="width: 100%"
+/>
+<div style="margin-top: 20px">
+  <qr-code [value]="qrValue" [size]="qrSize"></qr-code>
+</div>
